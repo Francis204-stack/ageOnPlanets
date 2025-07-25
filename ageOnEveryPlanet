@@ -1,0 +1,42 @@
+#include <iostream>
+#include <iomanip> 
+
+using namespace std;
+
+int main() {
+    // Earth year in seconds
+    const double earthYearSeconds = 31557600.0;
+
+    // Orbital periods in Earth years
+    const double MERCURY = 0.2408467;
+    const double VENUS   = 0.61519726;
+    const double EARTH   = 1.0;
+    const double MARS    = 1.8808158;
+    const double JUPITER = 11.862615;
+    const double SATURN  = 29.447498;
+    const double URANUS  = 84.016846;
+    const double NEPTUNE = 164.79132;
+
+    // Input: Age in seconds
+    double seconds;
+    cout << "Enter your age in seconds: ";
+    cin >> seconds;
+
+    // Age in Earth years
+    double ageOnEarth = seconds / earthYearSeconds;
+
+    // Display age on each planet
+    cout << fixed << setprecision(2); // 2 decimal places
+    cout << "\nYour age on different planets:\n";
+    cout << "--------------------------------\n";
+    cout << "Mercury: " << ageOnEarth / MERCURY << " years\n";
+    cout << "Venus:   " << ageOnEarth / VENUS << " years\n";
+    cout << "Earth:   " << ageOnEarth / EARTH << " years\n";
+    cout << "Mars:    " << ageOnEarth / MARS << " years\n";
+    cout << "Jupiter: " << ageOnEarth / JUPITER << " years\n";
+    cout << "Saturn:  " << ageOnEarth / SATURN << " years\n";
+    cout << "Uranus:  " << ageOnEarth / URANUS << " years\n";
+    cout << "Neptune: " << ageOnEarth / NEPTUNE << " years\n";
+
+    return 0;
+}
